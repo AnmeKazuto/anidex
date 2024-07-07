@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--AnmeKazuto-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li><a href="#"><p>Home</p></a></li>
+                <li><a href=".about"><p>About</p></a></li>
+                <li><a href=".search"><p>Search</p></a></li>
+            </ul>
+          
+        </div><br>
+    </div>
+    <div class="body">
+        <div class="anime-search">
+            <div class="search">
+                
+                    <input type="text" id="search"  placeholder="Enter Anime Name">
+                    <button id="btn" onclick="getdata()">Enter</button>
+                
+               
+                
+            </div>
+        </div>
+        <div class="anime-display" id="animedisplay">
+            <div class="anime">
+                <img id="img"src="#" alt="Anime Cover Image">
+            </div>
+            <div class="details">
+                <div class="title">
+                    <p id="title">anime title</p>
+                </div>
+                <div class="synopsis">
+                    <p id="synopsis">anime synopsis</p>
+                </div>
+                <div class="types">
+                    <p id="type">anime type</p>
+                </div>
+                <div class="episodes">
+                    <p id="episodes">Anime episode #</p>
+                </div>
+
+            </div>
+            
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="pg-about">
+        <p>This Website uses MAl and Anilist database to find anime using the title that is searched</p>
+    </div>
+    <script src="index.js">
+        function noRefresh(event) {
+                event.preventDefault();
+                    
+                    }
+    </script>
+</body>
+</html>
