@@ -1,4 +1,5 @@
 *{
+    background: lightblue;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -63,9 +64,13 @@
 }
 .anime-search button{
     border: none;
-    background-color: white;
     font-size: 15px;
     color:gray;
+    
+    
+}
+.anime-search button:hover{
+    cursor: pointer;
     
 }
 .anime-display{

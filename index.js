@@ -30,7 +30,11 @@ async function getdata(){
         console.log(data.data[0])
         const dat = data.data[0];
         image.src = dat.images.jpg.image_url
-        title.innerText = animename.charAt(0).toUpperCase() + animename.slice(1);
+        title.innerText = `${dat.title} \n  ${dat.title_english}`;
+        if ( dat.title == dat.title_english){
+            title.innerText = dat.title;
+        }
+        
         synopsis.innerText = "synopsis : " + dat.synopsis;
         type.innerText = "Type : " + dat.type;
         episodes.innerText = "episodes : " + dat.episodes;
