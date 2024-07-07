@@ -9,7 +9,9 @@ let animedisplay = document.getElementById("animedisplay")
 
 
 
-
+document.getElementById("form").addEventListener('submit', function(event){
+    event.preventDefault();
+})
 
 async function getdata(){
     let animename = document.getElementById("search").value;
