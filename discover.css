@@ -43,7 +43,7 @@
 
 
 .body{
-    width: fit-content;
+    width: 500px;
     margin-left:auto;
     margin-right: auto;
 
@@ -88,4 +88,21 @@
     margin-bottom: 10px;
 
 
+}
+.topAnime {
+    white-space: nowrap;
+    width: 500px;
+    overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
+    scrollbar-width: thin;
+    
+
+}
+.topAnime img{
+    width: 100px;
+    height: 150px;
+}
+.trending{
+    text-align: center;
 }
