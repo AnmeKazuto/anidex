@@ -12,8 +12,9 @@ let animedisplay = document.getElementById("animedisplay")
 
 
 async function getdata(){
-    let animeType = document.getElementById("anime-type").value
-    let url = `https://api.jikan.moe/v4/top/anime`
+    let animetype = document.getElementById("anime-type").value
+    
+    let url = `https://api.jikan.moe/v4/random/anime?sfw`
     
     const response = await fetch(url);
 
@@ -24,48 +25,53 @@ async function getdata(){
 
 
         }
-        
-        console.log(response)
-        animedisplay.style.display = "grid"
-
         const data = await response.json();
-        console.log(data)
-        let topArray = data.data
-        
+        const dat = data.data;
+        if(animetype == dat.type){
+            console.log(response)
+            animedisplay.style.display = "grid"
 
-        
-            for (let i in topArray){
-                    
-                    let x = 0
-                    let topAnime = document.getElementById(`topImg${i}`)
-                    let topLink = document.getElementById(`topLink${i}`)
-                    let Topdata = data.data
-                    topAnime.src = Topdata[i].images.jpg.image_url
-                    let animeL = Topdata[i].url
-                    topLink.setAttribute('href', animeL)
-
-                    
-                    console.log(i)
-                    console.log(Topdata[i])
-                    console.log(topArray)
-                    console.log(topAnime)
-                    console.log(animeL)
-
-                    x++
-                
+            console.log(animetype)
+            
+            
+            console.log(data)
+            console.log(data.data[0])
+            
+            image.src = dat.images.jpg.image_url
+            title.innerText = `Title: ${dat.title} \n English Title: ${dat.title_english}`;
+            if ( dat.title == dat.title_english){
+                title.innerText = dat.title;
             }
+            
+            
+            synopsis.innerText = "synopsis : " + dat.synopsis;
+            type.innerText = "Type : " + dat.type;
+            episodes.innerText = "episodes : " + dat.episodes;
+            
+        }
+        if(animetype == ""){
+            console.log(response)
+            animedisplay.style.display = "grid"
+
+            console.log(animetype)
+            
+            
+            console.log(data)
+            console.log(data.data[0])
+            
+            image.src = dat.images.jpg.image_url
+            title.innerText = `Title: ${dat.title} \n English Title: ${dat.title_english}`;
+            if ( dat.title == dat.title_english){
+                title.innerText = dat.title;
+            }
+            
+            
+            synopsis.innerText = "synopsis : " + dat.synopsis;
+            type.innerText = "Type : " + dat.type;
+            episodes.innerText = "episodes : " + dat.episodes;
+
+        }
         
-       // const dat = data.data;
-        //image.src = dat.images.jpg.image_url
-        //title.innerText = `Title: ${dat.title} \n English Title: ${dat.title_english}`;
-        //if ( dat.title == dat.title_english){
-        //    title.innerText = dat.title;
-        //}
-        
-        
-        //synopsis.innerText = "synopsis : " + dat.synopsis;
-        //type.innerText = "Type : " + dat.type;
-        //episodes.innerText = "episodes : " + dat.episodes;
 
     }
 
@@ -105,7 +111,7 @@ async function Trending(){
                     let topAnime = document.getElementById(`topImg${i}`)
                     let topLink = document.getElementById(`topLink${i}`)
                     let Topdata = data.data
-                    topAnime.src = Topdata[i].images.jpg.image_url
+                     topAnime.src = Topdata[i].images.jpg.image_url
                     let animeL = Topdata[i].url
                     topLink.setAttribute('href', animeL)
 
