@@ -1,10 +1,10 @@
 let image = document.getElementById("img");
-let title = document.getElementById("title")
-let synopsis = document.getElementById("synopsis")
-let type = document.getElementById("type")
-let episodes = document.getElementById("episodes")
-let animedisplay = document.getElementById("animedisplay")
-
+let title = document.getElementById("title");
+let synopsis = document.getElementById("synopsis");
+let type = document.getElementById("type");
+let episodes = document.getElementById("episodes");
+let animedisplay = document.getElementById("animedisplay");
+let preview = document.getElementsByClassName("preview");
 
 
 
@@ -27,12 +27,27 @@ async function getdata(){
 
         }
         animedisplay.style.display = "grid"
-
+        
+        console.log(url);
         const data = await response.json();
+        console.log(data.data);
         console.log(data.data[0])
         const dat = data.data[0];
         image.src = dat.images.jpg.image_url
         title.innerText = `${dat.title} \n  ${dat.title_english}`;
+        /* preview for anime from search so they
+        can pick what they want to see */
+        const previewDat = data.data;
+        for(i in previewDat){
+        const previewImg = document.createElement("img");
+        console.log(i)
+        
+        
+    
+    
+    
+        }
+        
         if ( dat.title == dat.title_english){
             title.innerText = dat.title;
         }

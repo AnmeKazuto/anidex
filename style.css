@@ -1,17 +1,21 @@
 *{
-    background: lightblue;
     list-style: none;
     margin: 0;
     padding: 0;
     text-decoration: none
 }
 .header{
-    height: 50px ;
+    height: 18em;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    border: 1px solid black;
+    border-radius: 2em;
+    margin: .5cm;
+    background-image: url("anidex background imf.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .nav ul li{
     display: inline;
@@ -49,23 +53,44 @@
 
 }
 
-.anime-search{
-    width: 300px;
+.search{
+    width: 200px;
+    height: 10px;
     margin: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 5px;
+    padding: .2em;
+    position: relative;
+    top: -.05em;
+    ;
+    
+    
 }
-.anime-search input{
+#form{
+    display: flex;
+    
+}
+.search input{
     border: none;
-    width: 250px;
-    font-size: 15px;
+    
+    
+    
+    font-size: 10px;
     outline: none;
+    
+    
 }
-.anime-search button{
+.search button{
     border: none;
-    font-size: 15px;
+    border-left: 1em;
+    font-size: 10px;
     color:gray;
+    display: flex;
+    position: relative;
+    left: 4.5em; 
+    background-color: none;
+    
+    
     
     
 }

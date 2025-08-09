@@ -4,15 +4,22 @@
     <!--AnmeKazuto-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANIDEX</title>
+    <title>Anidex | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <div class="nav">
             <ul>
-                <li><a href="#"><p>Home</p></a></li>
-                <li><a href="discover.html"><p>Discover</p></a></li>
+                
+                <li><div class="search">
+                    <form id="form" onsubmit="getdata()">
+                        <input type="text" id="search"  placeholder="Enter Anime Name">
+                        <button id="btn" onclick="getdata()">Enter</button>
+                    </form>
+                   
+                    
+                </div></li>
                 
             </ul>
           
@@ -20,16 +27,11 @@
     </div>
     <div class="body">
         <div class="anime-search">
-            <div class="search">
-                <form id="form" onsubmit="getdata()">
-                    <input type="text" id="search"  placeholder="Enter Anime Name">
-                    <button id="btn" onclick="getdata()">Enter</button>
-                </form>
-               
-                
-            </div>
         </div>
         <div class="anime-display" id="animedisplay">
+            <div class="preview">
+                
+            </div>
             <div class="anime">
                 <img id="img"src="#" alt="Anime Cover Image">
             </div>
